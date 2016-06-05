@@ -1,10 +1,13 @@
 package com.myapp.hackbanero.hackbanero;
 
+import android.content.res.AssetManager;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.InputStream;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -18,12 +21,16 @@ public class PruebaExcel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba_excel);
 
-        File f = new File("/Users'kevingamboa17/Documents/hola.xls");
+
 
         try {
-            Workbook wb = Workbook.getWorkbook(f);
+            AssetManager am= getAssets();
+            InputStream is= am.open("hola.xls");
+
+
+            Workbook wb = Workbook.getWorkbook(is);
             Sheet s = wb.getSheet(0);
-            Cell c = s.getCell(1,4);
+            Cell c = s.getCell(1,6);
             hola = c.getContents();
         }
         catch (Exception e){
