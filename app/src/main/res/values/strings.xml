@@ -8,7 +8,7 @@
     <string name="textview_producto_sembrado">Seleccionar</string>
     <string name="textview_producto_cosechado">Seleccionar</string>
     <string name="textview_producto_obtenido">Seleccionar</string>
-    <string name="textview_indice_manufactura">Índice de crecimiento de la industria ''--------''</string>
+    <string name="textview_indice_manufactura">Indice de crecimiento de la industria -------- </string>
     <string name="textview_periodo_incial_sector">Seleccione un periodo</string>
     <string name="button_realizar_consulta">Consultar</string>
     <string name="button_siguiente">Siguiente</string>

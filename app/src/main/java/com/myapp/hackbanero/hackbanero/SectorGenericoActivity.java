@@ -72,12 +72,12 @@ public class SectorGenericoActivity extends AppCompatActivity {
                                         spinnerPeriodoI.getSelectedItem().toString(),
                                         spinnerPeriodoF.getSelectedItem().toString());
         if (controlador.validarSelecciones()){
-           /* Intent i = new Intent(this, );
+            Intent i = new Intent(this, SectorSecundarioGenericoActivity.class );
             i.putExtra("estado", estado );
             i.putExtra("año_inicial", periodoInicial);
             i.putExtra("año_final", periodoFinal);
             i.putExtra("subsector", sector);
-            */
+
         }
     }
 }
