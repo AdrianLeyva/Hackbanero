@@ -59,16 +59,24 @@ public class MainActivity extends AppCompatActivity {
         if (estadoSeleccionado == "Yucatán") {
             switch (sectorSeleccionado) {
                 case "Primario":
-                    Intent i = new Intent(this, SectorSecundarioActivity.class);
+                    Intent i = new Intent(this, SectorGenericoActivity.class);
                     i.putExtra("estado", estadoSeleccionado);
                     startActivity(i);
 
                 case "Secundario":
-                    //
+                    Intent j = new Intent(this, SectorGenericoActivity.class);
+                    j.putExtra("estado", estadoSeleccionado);
+                    j.putExtra("sector", sectorSeleccionado);
+                    startActivity(j);
+
                     break;
 
                 case "Terciario":
-                    //
+                    Intent k = new Intent(this, SectorGenericoActivity.class);
+                    k.putExtra("estado", estadoSeleccionado);
+                    k.putExtra("sector", sectorSeleccionado);
+                    startActivity(k);
+
                     break;
                 default:
                     break;
@@ -79,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
 
-      //  Intent i = new Intent(this, PruebaExcel.class);
-      //  startActivity(i);
+       //Intent i = new Intent(this, PruebaExcel.class);
+       //startActivity(i);
     }
 
 
