@@ -3,52 +3,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SectorSecundarioGenericoActivity">
+    tools:context=".SectorSecundarioGenericoActivity"
+    android:background="@drawable/yucatan2">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_SM_Estado"
-        android:text="@string/textview_nombre_estado"
-        android:gravity="center"
-        android:textSize="30sp"
+        android:layout_height="match_parent"
         android:background="#000000"
-        android:textColor="#ffffff"/>
+        android:alpha=".7">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_indiceGenerico"
-        android:text="@string/textview_indice_manufactura"
-        android:gravity="center"
-        android:layout_below="@id/textView_SM_Estado"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_SM_Estado"
+            android:text="@string/textview_nombre_estado"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:background="#000000"
+            android:textColor="#ffffff"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:textSize="30sp"
-        android:id="@+id/editText_indiceManufactura"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000"
-        android:text="hola" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_indiceGenerico"
+            android:text="@string/textview_indice_manufactura"
+            android:gravity="center"
+            android:layout_below="@id/textView_SM_Estado"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="#000000"
-        android:text="@string/textview_periodo_secundario"
-        android:id="@+id/textView_Periodo_SS"
-        android:layout_below="@+id/editText_indiceManufactura"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_below="@+id/textView_indiceGenerico"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:id="@+id/editText_indiceManufactura"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:text="hola"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:text="@string/textview_periodo_secundario"
+            android:id="@+id/textView_Periodo_SS"
+            android:layout_below="@+id/editText_indiceManufactura"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView_Periodo_SS"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:id="@+id/textViewPromedios"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:id="@+id/textViewPorcentaje"
+                android:layout_below="@+id/textViewPromedios"
+                android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
