@@ -20,6 +20,7 @@ public class SectorGenericoActivity extends AppCompatActivity {
     private ControladorSectorGenerico controlador;
     private ArrayList<String> subSectores;
     private String sector;
+    private String subSector;
     private String estado;
     private String [] sectoresSecundarios = {"Manufactura", "Construcción", "Industria"};
     private String [] sectoresTerciarios = {"Bienes y servicios al por menor", "Bienes y Servicios al por mayor",
@@ -71,12 +72,19 @@ public class SectorGenericoActivity extends AppCompatActivity {
         ControladorSectorGenerico controlador = new ControladorSectorGenerico(this,
                                         spinnerPeriodoI.getSelectedItem().toString(),
                                         spinnerPeriodoF.getSelectedItem().toString());
+
+        subSector = spinnerSubSector.getSelectedItem().toString();
+        String periodoI = spinnerPeriodoI.getSelectedItem().toString();
+        String periodoF = spinnerPeriodoF.getSelectedItem().toString();
+
         if (controlador.validarSelecciones()){
             Intent i = new Intent(this, SectorSecundarioGenericoActivity.class );
             i.putExtra("estado", estado );
-            i.putExtra("año_inicial", periodoInicial);
-            i.putExtra("año_final", periodoFinal);
-            i.putExtra("subsector", sector);
+            i.putExtra("año_inicial", periodoI);
+            i.putExtra("año_final", periodoF);
+            i.putExtra("subsector", subSector);
+            startActivity(i);
+
 
         }
     }

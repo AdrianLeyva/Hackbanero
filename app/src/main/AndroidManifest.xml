@@ -29,6 +29,7 @@
         </activity>
 
         <activity android:name=".PruebaExcel"></activity>
+        <activity android:name=".SectorSecundarioGenericoActivity"></activity>
     </application>
 
 </manifest>

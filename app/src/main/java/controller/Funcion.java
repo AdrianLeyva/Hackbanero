@@ -1,55 +1,54 @@
-package com.myapp.hackbanero.hackbanero;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controller;
 
+import android.content.Context;
 import android.content.res.AssetManager;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TextView;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
-public class PruebaExcel extends AppCompatActivity {
-    private String hola;
-    private TextView pruebaExcel;
-    String resultad;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_excel);
-
+/**
+ *
+ * @author Marco
+ */
+public class Funcion {
+    private String resultad;
 
 
 
-
-    }
-
-    public String Buscar(String sector, String inicio, String fin) {
-
+    public String Buscar(Context view, String sector, String inicio, String fin) throws IOException, BiffException{
+        
         ArrayList resultados = new ArrayList();
 
 
         try {
-
-            AssetManager am = getAssets();
+            AssetManager am = view.getAssets();
             InputStream is = am.open("Sector Secundario.xls");
 
             Workbook wb = Workbook.getWorkbook(is);
-            Sheet s = wb.getSheet(0);
 
+            Sheet s = wb.getSheet(0);
 
             int columna = 0;
 
-            if ("Industria".equals(sector)) {
+            if ("Industria".compareTo(sector) == 0) {
                 columna = 1;
-            } else if ("Manufactura".equals(sector)) {
+            } else if ("Manufactura".compareTo(sector) == 0) {
                 columna = 2;
-            } else if ("Construcción".equals(sector)) {
+            } else if ("Construcción".compareTo(sector) == 0) {
                 columna = 3;
             }
 
@@ -101,14 +100,14 @@ public class PruebaExcel extends AppCompatActivity {
 
             float result = 0;
             result = suma / tamaño;
-            //resultad = String.valueOf(result);
-            resultad = "hola";
+            resultad = String.valueOf(result);
 
-            return resultad;
-        } catch (Exception e) {
 
+        }catch (Exception e){
+            Log.wtf("Exception", e.getMessage());
         }
         return resultad;
-
     }
+    
+    
 }
