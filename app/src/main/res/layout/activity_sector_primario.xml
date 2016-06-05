@@ -22,55 +22,78 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:alpha=".9"
         android:id="@+id/spinner_SectorAPG"
         android:background="#ffffff"
         android:gravity="center"
+        android:layout_marginTop="46dp"
         android:layout_below="@+id/textView_nombreEstado"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:background="#000000"
-        android:text="@string/textview_periodo_sector"
+        android:text="@string/textview_periodo_incial_sector"
         android:textSize="20sp"
         android:textColor="#ffffff"
         android:id="@+id/textView"
-        android:layout_above="@+id/button_SP_Siguiente"
-        android:layout_alignLeft="@+id/textView_nombreEstado"
-        android:layout_alignStart="@+id/textView_nombreEstado"
-        android:layout_marginBottom="128dp" />
+        android:layout_below="@+id/spinner_SectorAPG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha=".9"
-        android:background="#ffffff"
-        android:gravity="center"
-        android:id="@+id/spinner_periodoSector"
-        android:layout_marginTop="39dp"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <Button
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/button_siguiente"
-        android:background="#000000"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:alpha=".9"
-        android:id="@+id/button_SP_Siguiente"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#a7a7a7"
+            android:id="@+id/spinner_PeriodoInicial" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:background="#000000"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:layout_alignBottom="@+id/spinner_PeriodoInicial"
+            android:layout_alignParentTop="true"
+            android:id="@+id/textView_guion"
+            android:layout_toRightOf="@+id/spinner_PeriodoInicial"
+            android:layout_toLeftOf="@+id/spinner_PeriodoFinal"
+            android:layout_toStartOf="@+id/spinner_PeriodoFinal" />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#a7a7a7"
+            android:id="@+id/spinner_PeriodoFinal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_siguiente"
+            android:textSize="30sp"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:alpha=".9"
+            android:id="@+id/button2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="67dp" />
+    </RelativeLayout>
 
 </RelativeLayout>

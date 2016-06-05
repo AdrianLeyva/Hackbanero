@@ -3,7 +3,7 @@
     <string name="textview_seleccionar_estado">Seleccionar estado</string>
     <string name="textview_seleccionar_sector">Seleccionar sector</string>
     <string name="textview_nombre_estado">Nombre Estado</string>
-    <string name="textview_periodo_sector">Seleccione un periodo</string>
+    <string name="textview_periodo_incial_sector">Seleccione un periodo</string>
     <string name="button_realizar_consulta">Consultar</string>
     <string name="button_siguiente">Siguiente</string>
 
