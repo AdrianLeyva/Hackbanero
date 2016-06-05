@@ -138,7 +138,7 @@ public class Funcion {
             int fechadeinicio = 0, fechadefin = 0;
 
             String fechaI = inicio + "/01";
-            String fechaF = fin + "/12";
+            String fechaF = fin + "/01";
 
             for (i = 0; i < 87; i++) {
                 Cell c = s.getCell(0, i);
@@ -158,12 +158,21 @@ public class Funcion {
             }
 
 
-            for (i = fechadeinicio; i <= fechadefin; i++) {
+            for (i = fechadeinicio; i <= fechadeinicio; i++) {
                 Cell c = s.getCell(columna, i);
 
                 String celda = c.getContents();
                 resultados.add(celda);
             }
+
+            for (i = fechadefin; i <= fechadefin; i++) {
+                Cell c = s.getCell(columna, i);
+
+                String celda = c.getContents();
+                resultados.add(celda);
+            }
+
+
             //for (int i=0 ; i<row ; i++){
             //    for (int j=0 ; j<col ; j++){
 
@@ -175,13 +184,14 @@ public class Funcion {
             float suma = 0;
 
 
-            for (int n = 0; n < tamaño; n++) {
-                float numero = Float.valueOf(resultados.get(n).toString());
-                suma = suma + numero;
-            }
+
+                float numero = Float.valueOf(resultados.get(0).toString());
+                float numero2 = Float.valueOf(resultados.get(1).toString());
+                float porcentaje = (numero*100)/numero2;
 
 
-            resultad = suma;
+
+            resultad = porcentaje;
 
 
         }catch (Exception e){

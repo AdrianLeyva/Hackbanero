@@ -102,7 +102,7 @@ public class SectorSecundarioGenericoActivity extends AppCompatActivity {
 
 
 
-                    Float promedio = ((resul2-resul)/(resul*100))*100;
+                    Float promedio = pruebaExcel.Buscar2(this, subSector, añoInicial,añoFinal);
                     textViewPorcentajes.setText(decimales.format(promedio)+ "%");
 
                     if(resultado2>resultado){
