@@ -10,8 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Splashscreen"
             android:screenOrientation="portrait">
@@ -21,14 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".SectorSecundarioActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <activity android:name=".PruebaExcel"></activity>
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PruebaExcel" />
+        <activity android:name=".SectorSecundarioGenericoActivity"></activity>
     </application>
 
 </manifest>
