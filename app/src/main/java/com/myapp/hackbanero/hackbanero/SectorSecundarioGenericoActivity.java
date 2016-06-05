@@ -19,5 +19,25 @@ public class SectorSecundarioGenericoActivity extends AppCompatActivity {
         TextView textViewEstado = (TextView)findViewById(R.id.textView_SM_Estado);
         TextView textViewIndice = (TextView)findViewById(R.id.textView_indiceGenerico);
         TextView textViewPeriodo = (TextView)findViewById(R.id.textView_Periodo_SS);
+
+        switch (subSector){
+            case "Manufactura":
+                textViewEstado.setText(estado);
+                textViewIndice.setText("Indice de crecimiento de la industria manufacturera");
+                textViewPeriodo.setText(añoInicial + " - " + añoFinal);
+                break;
+            case "Construcción":
+                textViewEstado.setText(estado);
+                textViewIndice.setText("Indice de crecimiento de la industria de construcción");
+                textViewPeriodo.setText(añoInicial + " - " + añoFinal);
+                break;
+            case "Industria":
+                textViewEstado.setText(estado);
+                textViewIndice.setText("Indice de crecimiento industrial");
+                textViewPeriodo.setText(añoInicial + " - " + añoFinal);
+                break;
+            default:
+                break;
+        }
     }
 }
