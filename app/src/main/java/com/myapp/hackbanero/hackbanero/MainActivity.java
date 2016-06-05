@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         String estadoSeleccionado = spinnerEstados.getSelectedItem().toString();
         String sectorSeleccionado = spinnerSectores.getSelectedItem().toString();
 
-        /*if (estadoSeleccionado == "Yucatán") {
+        if (estadoSeleccionado == "Yucatán") {
             switch (sectorSeleccionado) {
                 case "Primario":
                     Intent i = new Intent(this, SectorPrimarioActivity.class);
@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast toast = Toast.makeText(this, "Esta es una demo, selecciona Yucatán, por favor", Toast.LENGTH_SHORT);
             toast.show();
-        } */
+        }
 
-        Intent i = new Intent(this, PruebaExcel.class);
-        startActivity(i);
+      //  Intent i = new Intent(this, PruebaExcel.class);
+      //  startActivity(i);
     }
 
 
