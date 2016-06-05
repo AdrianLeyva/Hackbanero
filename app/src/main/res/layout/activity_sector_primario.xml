@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yucatan2"
+    android:alpha=".9"
+    tools:context="com.myapp.hackbanero.hackbanero.SectorPrimarioActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_nombre_estado"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="#000000"
+        android:gravity="center"
+        android:id="@+id/textView_nombreEstado"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:alpha=".9"
+        android:id="@+id/spinner_SectorAPG"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:layout_below="@+id/textView_nombreEstado"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#000000"
+        android:text="@string/textview_periodo_sector"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/textView"
+        android:layout_above="@+id/button_SP_Siguiente"
+        android:layout_alignLeft="@+id/textView_nombreEstado"
+        android:layout_alignStart="@+id/textView_nombreEstado"
+        android:layout_marginBottom="128dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha=".9"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/spinner_periodoSector"
+        android:layout_marginTop="39dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/button_siguiente"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:alpha=".9"
+        android:id="@+id/button_SP_Siguiente"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
