@@ -4,14 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class SectorSecundarioGenericoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sector_manufactura);
+        setContentView(R.layout.activity_sector_secundario_generico);
 
         String subSector = getIntent().getStringExtra("subsector");
         String añoInicial = getIntent().getStringExtra("año_inicial");
