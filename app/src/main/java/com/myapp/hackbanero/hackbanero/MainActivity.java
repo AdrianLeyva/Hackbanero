@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import controller.ControladorMain;
+//import controller.ControladorMain;
 
 public class MainActivity extends AppCompatActivity {
     //Array de los estados de la república
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private String [] sectores = {"Primario", "Secundario", "Terciario"};
     private Spinner spinnerEstados;
     private Spinner spinnerSectores;
-    private ControladorMain controladorMain;
+    //private ControladorMain controladorMain;
 
 
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         if (estadoSeleccionado == "Yucatán") {
             switch (sectorSeleccionado) {
                 case "Primario":
-                    Intent i = new Intent(this, SectorPrimarioActivity.class);
+                    Intent i = new Intent(this, SectorSecundarioActivity.class);
                     i.putExtra("estado", estadoSeleccionado);
                     startActivity(i);
 

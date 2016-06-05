@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/yucatan2"
     android:alpha=".9"
-    tools:context="com.myapp.hackbanero.hackbanero.SectorPrimarioActivity">
+    tools:context=".SectorSecundarioActivity">
 
     <TextView
         android:layout_width="match_parent"

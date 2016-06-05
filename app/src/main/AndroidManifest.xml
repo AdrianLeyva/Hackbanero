@@ -23,7 +23,7 @@
         </activity>
 
         <activity
-            android:name=".SectorPrimarioActivity"
+            android:name=".SectorSecundarioActivity"
             android:screenOrientation="portrait">
 
         </activity>
