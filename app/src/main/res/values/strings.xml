@@ -12,5 +12,9 @@
     <string name="textview_periodo_incial_sector">Seleccione un periodo</string>
     <string name="button_realizar_consulta">Consultar</string>
     <string name="button_siguiente">Siguiente</string>
-
+    <string name="perro">Perro</string>
+    <string name="gato">Gato</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="sometimes">Algunas veces</string>
 </resources>
